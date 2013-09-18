@@ -6,10 +6,26 @@
 //  Copyright (c) 2013 nxtbgthng GmbH. All rights reserved.
 //
 
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
+
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+
+#import <OCMock/OCMock.h>
+#import <OHHTTPStubs/OHHTTPStubs.h>
+
+#define MOCKITO_SHORTHAND
+#import <OCMockito/OCMockito.h>
+
 #import <XCTest/XCTest.h>
 
-@interface mockTests : XCTestCase
 
+#import "NXIncrementor.h"
+
+@interface mockTests : XCTestCase
+@property NXIncrementor *incrementorMockito;
+@property id incrementorOCMock;
 @end
 
 @implementation mockTests
@@ -17,18 +33,86 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.incrementorMockito = mock([NXIncrementor class]);
+    
+    self.incrementorOCMock = [OCMockObject mockForClass:[NXIncrementor class]];
 }
 
-- (void)tearDown
+#pragma mark - Simple Verify
+
+- (void)testOCMockitoVerify
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+    [self.incrementorMockito increment];
+    
+    [verify(self.incrementorMockito) increment];
 }
 
-- (void)testExample
+- (void)testOCMockVerify
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    [[self.incrementorOCMock expect] increment];
+    [self.incrementorOCMock increment];
+    
+    [self.incrementorOCMock verify];
+}
+
+
+#pragma mark - Verify invocation counts
+
+- (void)testOCMockitoVerifyTimes
+{
+    [self.incrementorMockito increment];
+    [self.incrementorMockito increment];
+    [self.incrementorMockito increment];
+    
+    [verifyCount(self.incrementorMockito, times(3)) increment];
+    [verifyCount(self.incrementorMockito, atLeast(3)) increment]; // OCMockito only
+}
+
+- (void)testOCMockVerifyTimes
+{
+    [[self.incrementorOCMock expect] increment];
+    [[self.incrementorOCMock expect] increment];
+    [[self.incrementorOCMock expect] increment];
+    
+    [self.incrementorOCMock increment];
+    [self.incrementorOCMock increment];
+    [self.incrementorOCMock increment];
+    
+    [self.incrementorOCMock verify];
+}
+
+
+#pragma mark - Verify Arguments
+
+- (void)testOCMockitoVerifyArguments
+{
+    [self.incrementorMockito incrementByX:2];
+    
+    [verify(self.incrementorMockito) incrementByX:2];
+    
+    // awesomeness++ by using OCHamcrest matchers
+    [[verify(self.incrementorMockito) withMatcher:greaterThan(@1)] incrementByX:0];
+    [[verify(self.incrementorMockito) withMatcher:equalToInt(2)] incrementByX:0];
+}
+
+- (void)testOCMockVerifyArguments
+{
+    [[self.incrementorOCMock expect] incrementByX:2];
+    
+    [self.incrementorOCMock incrementByX:2];
+    
+    [self.incrementorOCMock verify];
+}
+
+- (void)testOCMockVerifyAnyAgrument
+{
+    // OCMock - does not work with primitives
+    [[self.incrementorOCMock expect] incrementByXNumber:OCMOCK_ANY];
+    
+    [self.incrementorOCMock incrementByXNumber:@2];
+    
+    [self.incrementorOCMock verify];
 }
 
 @end

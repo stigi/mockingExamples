@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0A5DFE35D44D27A91990C8 /* libPods-mockTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DAD625327145C58E743845 /* libPods-mockTests.a */; };
 		9416F21F17E97C16002C6B0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9416F21E17E97C16002C6B0B /* Foundation.framework */; };
 		9416F22117E97C16002C6B0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9416F22017E97C16002C6B0B /* CoreGraphics.framework */; };
 		9416F22317E97C16002C6B0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9416F22217E97C16002C6B0B /* UIKit.framework */; };
@@ -19,6 +20,12 @@
 		9416F23A17E97C16002C6B0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9416F22217E97C16002C6B0B /* UIKit.framework */; };
 		9416F24217E97C16002C6B0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9416F24017E97C16002C6B0B /* InfoPlist.strings */; };
 		9416F24417E97C16002C6B0B /* mockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F24317E97C16002C6B0B /* mockTests.m */; };
+		9416F24F17E98045002C6B0B /* NXIncrementor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F24E17E98045002C6B0B /* NXIncrementor.m */; };
+		9416F25117E983B1002C6B0B /* stubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F25017E983B1002C6B0B /* stubTests.m */; };
+		9416F25317E99391002C6B0B /* partialMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F25217E99391002C6B0B /* partialMockTests.m */; };
+		9416F25517E995D9002C6B0B /* niceMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F25417E995D9002C6B0B /* niceMockTests.m */; };
+		9416F25717E99A8D002C6B0B /* httpStubsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9416F25617E99A8D002C6B0B /* httpStubsTests.m */; };
+		9416F25917E99F78002C6B0B /* Responses.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9416F25817E99F78002C6B0B /* Responses.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,15 @@
 		9416F23F17E97C16002C6B0B /* mockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mockTests-Info.plist"; sourceTree = "<group>"; };
 		9416F24117E97C16002C6B0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9416F24317E97C16002C6B0B /* mockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mockTests.m; sourceTree = "<group>"; };
+		9416F24D17E98045002C6B0B /* NXIncrementor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXIncrementor.h; sourceTree = "<group>"; };
+		9416F24E17E98045002C6B0B /* NXIncrementor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXIncrementor.m; sourceTree = "<group>"; };
+		9416F25017E983B1002C6B0B /* stubTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stubTests.m; sourceTree = "<group>"; };
+		9416F25217E99391002C6B0B /* partialMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = partialMockTests.m; sourceTree = "<group>"; };
+		9416F25417E995D9002C6B0B /* niceMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = niceMockTests.m; sourceTree = "<group>"; };
+		9416F25617E99A8D002C6B0B /* httpStubsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpStubsTests.m; sourceTree = "<group>"; };
+		9416F25817E99F78002C6B0B /* Responses.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Responses.bundle; sourceTree = "<group>"; };
+		B7DAD625327145C58E743845 /* libPods-mockTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mockTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF746E7E5D66429F9C098F21 /* Pods-mockTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockTests.xcconfig"; path = "Pods/Pods-mockTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,7 @@
 				9416F23817E97C16002C6B0B /* XCTest.framework in Frameworks */,
 				9416F23A17E97C16002C6B0B /* UIKit.framework in Frameworks */,
 				9416F23917E97C16002C6B0B /* Foundation.framework in Frameworks */,
+				2E0A5DFE35D44D27A91990C8 /* libPods-mockTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,7 @@
 				9416F23D17E97C16002C6B0B /* mockTests */,
 				9416F21D17E97C16002C6B0B /* Frameworks */,
 				9416F21C17E97C16002C6B0B /* Products */,
+				CF746E7E5D66429F9C098F21 /* Pods-mockTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +118,7 @@
 				9416F22017E97C16002C6B0B /* CoreGraphics.framework */,
 				9416F22217E97C16002C6B0B /* UIKit.framework */,
 				9416F23717E97C16002C6B0B /* XCTest.framework */,
+				B7DAD625327145C58E743845 /* libPods-mockTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,6 +130,8 @@
 				9416F22E17E97C16002C6B0B /* NXAppDelegate.m */,
 				9416F23017E97C16002C6B0B /* Images.xcassets */,
 				9416F22517E97C16002C6B0B /* Supporting Files */,
+				9416F24D17E98045002C6B0B /* NXIncrementor.h */,
+				9416F24E17E98045002C6B0B /* NXIncrementor.m */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -130,7 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				9416F24317E97C16002C6B0B /* mockTests.m */,
+				9416F25417E995D9002C6B0B /* niceMockTests.m */,
+				9416F25017E983B1002C6B0B /* stubTests.m */,
+				9416F25217E99391002C6B0B /* partialMockTests.m */,
+				9416F25617E99A8D002C6B0B /* httpStubsTests.m */,
 				9416F23E17E97C16002C6B0B /* Supporting Files */,
+				9416F25817E99F78002C6B0B /* Responses.bundle */,
 			);
 			path = mockTests;
 			sourceTree = "<group>";
@@ -168,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9416F24A17E97C16002C6B0B /* Build configuration list for PBXNativeTarget "mockTests" */;
 			buildPhases = (
+				D11D1DF1949440D2B93B3816 /* Check Pods Manifest.lock */,
 				9416F23217E97C16002C6B0B /* Sources */,
 				9416F23317E97C16002C6B0B /* Frameworks */,
 				9416F23417E97C16002C6B0B /* Resources */,
+				E34EE38CFE52440C9FE1E6DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,17 +257,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9416F25917E99F78002C6B0B /* Responses.bundle in Resources */,
 				9416F24217E97C16002C6B0B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D11D1DF1949440D2B93B3816 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E34EE38CFE52440C9FE1E6DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-mockTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9416F21717E97C16002C6B0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9416F24F17E98045002C6B0B /* NXIncrementor.m in Sources */,
 				9416F22F17E97C16002C6B0B /* NXAppDelegate.m in Sources */,
 				9416F22B17E97C16002C6B0B /* main.m in Sources */,
 			);
@@ -250,6 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9416F24417E97C16002C6B0B /* mockTests.m in Sources */,
+				9416F25117E983B1002C6B0B /* stubTests.m in Sources */,
+				9416F25517E995D9002C6B0B /* niceMockTests.m in Sources */,
+				9416F25717E99A8D002C6B0B /* httpStubsTests.m in Sources */,
+				9416F25317E99391002C6B0B /* partialMockTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -365,6 +432,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mock/mock-Prefix.pch";
 				INFOPLIST_FILE = "mock/mock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,6 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mock/mock-Prefix.pch";
 				INFOPLIST_FILE = "mock/mock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +454,7 @@
 		};
 		9416F24B17E97C16002C6B0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF746E7E5D66429F9C098F21 /* Pods-mockTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mock.app/mock";
@@ -408,6 +478,7 @@
 		};
 		9416F24C17E97C16002C6B0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF746E7E5D66429F9C098F21 /* Pods-mockTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mock.app/mock";
@@ -444,6 +515,7 @@
 				9416F24917E97C16002C6B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9416F24A17E97C16002C6B0B /* Build configuration list for PBXNativeTarget "mockTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +524,7 @@
 				9416F24C17E97C16002C6B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
